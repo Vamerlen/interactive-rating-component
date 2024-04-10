@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thank you!</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+    <main>
+        <div class="thankyou_box">
+            <img src="./images/illustration-thank-you.svg" alt="thankyou" />
+
+            <div class="rating_result">
+                <p>
+                    You selected <span id="selected-rating"></span> out of 5
+                </p>
+            </div>
+            <h1>
+                Thank You!
+            </h1>
+            <p>
+                We appreciate you taking the time to give a rating. If you ever need more support,
+                don’t hesitate to get in touch!
+            </p>
+
+        </div>
+    </main>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/rohitdubey1352" target="_blank">Rohit Dubey</a>.
+    </div>
+
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const rating = urlParams.get('rating');
+        document.getElementById('selected-rating').textContent = rating;
+    </script>
+
+</body>
+
+</html>

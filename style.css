@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #141519;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* main */
+.main_box {
+    position: relative;
+    width: 25.625rem;
+    height: 26rem;
+    border-radius: 1.875rem;
+    background: linear-gradient(180deg, #212831 0%, #171E28 98.9%);
+    padding: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+h1 {
+    color: #fff;
+}
+
+p {
+    color: #ffffff80;
+    line-height: 161%;
+}
+
+.main_box .star {
+    position: relative;
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 1.5625rem;
+    background: #262F38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating_button {
+    color: #858E9D;
+    background: #253036;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+}
+
+.rating_button:hover {
+    background: #FC7617;
+    color: #fff;
+}
+
+.rating_button:focus,
+.rating_button:active {
+    background: #858E9D;
+    color: #fff;
+}
+
+.mybutton {
+    position: relative;
+    border-radius: 1.40625rem;
+    background: #FC7617;
+    border: none;
+    width: 21.3125rem;
+    height: 2.8125rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 2rem;
+}
+
+.mybutton:hover,
+.mybutton:focus,
+.mybutton:active {
+    background: #fff;
+    color: #FC7617;
+}
+
+/* attribution */
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+.attribution a {
+    color: #fff;
+}
+
+/* thank you */
+.thankyou_box {
+    position: relative;
+    width: 25.625rem;
+    height: 26rem;
+    border-radius: 1.875rem;
+    background: linear-gradient(180deg, #212831 0%, #171E28 98.9%);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+
+.thankyou_box .rating_result {
+    width: 12.0625rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background: #262F38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating_result p {
+    font-size: .84rem;
+    color: #FC7617;
+}
+
+
+
+/* ResponsiveNess */
+@media screen and (max-width: 720px) {
+
+    .main_box,
+    .thankyou_box {
+        width: 327px;
+        margin: auto;
+    }
+
+    .mybutton {
+        width: 100%;
+    }
+}

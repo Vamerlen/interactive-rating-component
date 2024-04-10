@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <main>
+    <!-- Rating state start -->
+    <div class="main_box">
+      <div class="star">
+        <img src="./images/icon-star.svg" alt="star" />
+      </div>
+      <h1>
+        How did we do?
+      </h1>
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!
+      </p>
+      <form action="./thankyou.html" method="get">
+        <div class="rating">
+          <button type="button" class="rating_button" value="1">1</button>
+          <button type="button" class="rating_button" value="2">2</button>
+          <button type="button" class="rating_button" value="3">3</button>
+          <button type="button" class="rating_button" value="4">4</button>
+          <button type="button" class="rating_button" value="5">5</button>
+          <input type="hidden" id="rating" name="rating" value="">
+        </div>
+
+        <button type="submit" class="mybutton">Submit</button>
+      </form>
+
+    </div>
+
+  </main>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/rohitdubey1352" target="_blank">Rohit Dubey</a>.
+  </div>
+
+  <script>
+    const ratingButtons = document.querySelectorAll('.rating_button');
+    ratingButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        ratingButtons.forEach(otherButton => otherButton.classList.remove('selected'));
+        button.classList.add('selected');
+        document.getElementById('rating').value = button.value;
+      });
+    });
+  </script>
+
+</body>
+
+</html>
